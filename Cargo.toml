@@ -1,0 +1,8 @@
+[package]
+name = "elevator"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+cli-animate = "0.1.0"
+pretty_assertions = "1.4.0"
