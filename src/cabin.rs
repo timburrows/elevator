@@ -1,9 +1,15 @@
+
 pub struct CabinController {
-    pub desired_floor: i16,
+    pub buttons: Vec<FloorButton>,
 }
 
 impl CabinController {
-    pub fn new(desired_floor: i16) -> Self {
-        CabinController { desired_floor }
+    pub fn new(available_floors: i16) -> Self {
+        CabinController { buttons: Vec::with_capacity(available_floors.try_into().unwrap()) }
     }
+}
+
+pub struct FloorButton {
+    floor: i16,
+    is_pressed: bool,
 }
